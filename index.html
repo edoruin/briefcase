@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edwin Agustín</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* New custom color palette for a more pleasing dark theme */
+        :root {
+            --color-background-dark: #1E1E1E; /* Fondo muy oscuro, casi negro */
+            --color-card-background: #2C2C2C; /* Fondo para secciones y tarjetas, ligeramente más claro */
+            --color-accent-blue: #6A8EAE; /* Azul/gris apagado como color de acento */
+            --color-text-light: #F0F0F0; /* Texto claro para contraste */
+            --color-text-muted: #B0B0B0; /* Texto secundario o menos prominente */
+        }
+
+        /* Applying Inter font globally and new custom background */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-background-dark); /* Fondo principal oscuro */
+            color: var(--color-text-light); /* Texto claro por defecto */
+        }
+
+        /* Utility classes for new custom colors */
+        .bg-primary-dark { background-color: var(--color-background-dark); }
+        .bg-card-dark { background-color: var(--color-card-background); }
+        .bg-accent-blue { background-color: var(--color-accent-blue); }
+        .text-accent-blue { color: var(--color-accent-blue); }
+        .border-accent-blue { border-color: var(--color-accent-blue); }
+        .text-light { color: var(--color-text-light); }
+        .text-muted { color: var(--color-text-muted); }
+
+        /* Custom shadow for a smoother look */
+        .smooth-shadow {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.15);
+        }
+        .hover-smooth-shadow:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <header class="bg-card-dark p-6 md:p-8 smooth-shadow rounded-b-3xl">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="relative w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden border-8 border-accent-blue smooth-shadow">
+                <img src="https://avatars.githubusercontent.com/u/112107397?v=4" alt="Foto de Perfil" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black opacity-10"></div>
+            </div>
+
+            <div class="text-center md:text-left flex-grow">
+                <h1 class="text-3xl md:text-5xl font-extrabold text-light mb-2">Edwin Jeremías Agustín Yack</h1>
+                <p class="text-xl md:text-2xl font-semibold text-accent-blue mb-2">Data Base Administrator | QA | Machine Learning Engineer</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8 md:py-12">
+
+        <section class="bg-card-dark p-6 md:p-8 rounded-2xl smooth-shadow mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-accent-blue mb-6 text-center">About</h2>
+            <div class="space-y-6 text-light leading-relaxed">
+                <p>hello</p>
+                <ul class="list-disc list-inside ml-4 space-y-2 text-muted">
+                    <li>Experiencia en análisis de datos, desarrollo de ETLs y modelado de bases de datos.</li>
+                    <li>Creación de informes y dashboards interactivos con Power BI y Tableau.</li>
+                    <li>Automatización de procesos con Python y Excel VBA.</li>
+                    <li>Fuerte capacidad para la resolución de problemas y la comunicación efectiva.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="bg-card-dark p-6 md:p-8 rounded-2xl smooth-shadow mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-accent-blue mb-8 text-center">Mis Proyectos Destacados</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="bg-primary-dark p-5 rounded-xl smooth-shadow hover-smooth-shadow transition-all duration-300 transform hover:-translate-y-2">
+                    <h3 class="text-2xl font-semibold text-light mb-4">Análisis con Power BI</h3>
+                    <img src="https://placehold.co/400x250/6A8EAE/F0F0F0?text=Power+BI+Project" alt="Imagen de proyecto Power BI" class="w-full h-40 object-cover rounded-lg mb-4 border border-accent-blue">
+                    <p class="text-muted text-sm mb-4">Descripción breve de un proyecto donde utilizaste Power BI para crear dashboards interactivos y visualizar datos.</p>
+                    <a href="https://github.com/tu_usuario/tu_repo_powerbi" target="_blank" class="inline-block bg-accent-blue text-light px-5 py-2 rounded-lg font-medium hover:bg-blue-600 transition-colors duration-200">Ver Repositorio</a>
+                </div>
+
+                <div class="bg-primary-dark p-5 rounded-xl smooth-shadow hover-smooth-shadow transition-all duration-300 transform hover:-translate-y-2">
+                    <h3 class="text-2xl font-semibold text-light mb-4">Automatización con Python</h3>
+                    <img src="https://placehold.co/400x250/6A8EAE/F0F0F0?text=Python+Project" alt="Imagen de proyecto Python" class="w-full h-40 object-cover rounded-lg mb-4 border border-accent-blue">
+                    <p class="text-muted text-sm mb-4">Ejemplo de un script o aplicación en Python para automatizar tareas, análisis de datos o desarrollo web.</p>
+                    <a href="https://github.com/tu_usuario/tu_repo_python" target="_blank" class="inline-block bg-accent-blue text-light px-5 py-2 rounded-lg font-medium hover:bg-blue-600 transition-colors duration-200">Ver Repositorio</a>
+                </div>
+
+                <div class="bg-primary-dark p-5 rounded-xl smooth-shadow hover-smooth-shadow transition-all duration-300 transform hover:-translate-y-2">
+                    <h3 class="text-2xl font-semibold text-light mb-4">Modelado en Excel</h3>
+                    <img src="https://placehold.co/400x250/6A8EAE/F0F0F0?text=Excel+Project" alt="Imagen de proyecto Excel" class="w-full h-40 object-cover rounded-lg mb-4 border border-accent-blue">
+                    <p class="text-muted text-sm mb-4">Demostración de una plantilla compleja, un modelo financiero o una solución con macros en Excel.</p>
+                    <a href="https://github.com/tu_usuario/tu_repo_excel" target="_blank" class="inline-block bg-accent-blue text-light px-5 py-2 rounded-lg font-medium hover:bg-blue-600 transition-colors duration-200">Ver Repositorio</a>
+                </div>
+
+                <div class="bg-primary-dark p-5 rounded-xl smooth-shadow hover-smooth-shadow transition-all duration-300 transform hover:-translate-y-2">
+                    <h3 class="text-2xl font-semibold text-light mb-4">Visualización de Datos</h3>
+                    <img src="https://placehold.co/400x250/6A8EAE/F0F0F0?text=Data+Viz+Project" alt="Imagen de proyecto de visualización de datos" class="w-full h-40 object-cover rounded-lg mb-4 border border-accent-blue">
+                    <p class="text-muted text-sm mb-4">Un proyecto que muestre tus habilidades en visualización de datos con herramientas como Tableau, D3.js o Matplotlib.</p>
+                    <a href="https://github.com/tu_usuario/tu_repo_dataviz" target="_blank" class="inline-block bg-accent-blue text-light px-5 py-2 rounded-lg font-medium hover:bg-blue-600 transition-colors duration-200">Ver Repositorio</a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-card-dark p-6 md:p-8 mt-auto rounded-t-3xl smooth-shadow">
+        <div class="container mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-accent-blue mb-4">Contact and profiles</h2>
+
+            <div class="flex flex-wrap justify-center gap-6 mb-6">
+                <a href="mailto:tu.correo@example.com" class="flex items-center text-light hover:text-accent-blue transition-colors duration-200">
+                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                    edwinjeremiasagustinyack@gmail.com
+                </a>
+                <a href="tel:+1234567890" class="flex items-center text-light hover:text-accent-blue transition-colors duration-200">
+                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.774a11.037 11.037 0 006.103 6.103l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                    +1 (829) 287 9164
+                </a>
+            </div>
+
+            <div class="flex justify-center space-x-6">
+                <a href="https://www.linkedin.com/in/edwin-jeremias-agustin/" target="_blank" class="text-light hover:text-accent-blue transition-colors duration-200">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+                    <span class="sr-only">LinkedIn</span>
+                </a>
+                <a href="https://github.com/edoruin" target="_blank" class="text-light hover:text-accent-blue transition-colors duration-200">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.47.087.683-.203.683-.447 0-.222-.007-.975-.011-1.912-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.46-1.11-1.46-.908-.619.069-.607.069-.607 1.004.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.089 2.91.833.091-.647.35-1.089.636-1.334-2.22-.253-4.555-1.116-4.555-4.949 0-1.092.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.024A9.137 9.137 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.024 2.747-1.024.546 1.379.202 2.398.099 2.65.64.7 1.028 1.596 1.028 2.688 0 3.841-2.339 4.685-4.568 4.935.359.307.678.915.678 1.846 0 1.33-.012 2.41-.012 2.747 0 .247.214.538.688.445C21.133 20.2 24 16.447 24 12.017 24 6.484 19.522 2 14 2h-2z" clip-rule="evenodd"></path></svg>
+                    <span class="sr-only">GitHub</span>
+                </a>
+                </div>
+
+            <p class="text-muted text-sm mt-6">© 2024 Edwin Agustín. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

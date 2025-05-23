@@ -1,2 +1,2 @@
-# Portafolio
-Pagina estatica enfocada en mostrar mi trayecto y habilidades en la Ciencia de los Datos
+# Briefcase
+static page focues in show my career path and skills in Data Science
